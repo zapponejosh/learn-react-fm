@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "dev": "parcel src/index.html"
   },
@@ -13,16 +14,25 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "@frontendmasters/pet": "^1.0.3",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Safari versions",
+    "last 2 iOs versions",
+    "last 2 firefox versions"
+  ]
 }
